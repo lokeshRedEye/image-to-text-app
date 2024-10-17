@@ -40,7 +40,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
     const input = msg ? msg : " Give a brief info about this image "
-    const result = await model.generateContent([
+    const result = await model.generateContent([ // hi da 
       input,
       {
         fileData: {
